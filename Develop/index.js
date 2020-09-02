@@ -22,6 +22,37 @@ const questions = [
         type: "input",
         name: "packageLink",
         message: "What is the link to the package?"
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "What are the usage instructions?"
+    },
+    {
+        type: "input",
+        name: "contribution",
+        message: "What are your contribution guidelines?"
+    },   
+    {
+        type: "input",
+        name: "licenseName",
+        message: "What is the name of your license?"
+    },
+    {
+        type: "input",
+        name: "licenseURL",
+        message: "what is the license URL?"
+    },
+    {
+        type: "input",
+        name: "test",
+        message: "Do you have any tests to include?"
+
+    },
+    {
+        type: "input",
+        name: "questions",
+        message: "What questions would you like to include?"
     }
 
 ];
@@ -39,33 +70,47 @@ function init() {
         let readMeTemplate = `
 # ${data.title}
 
+## Description
+
 ${data.description}
+
+# Table of Contents
+* [Description](#Description)
+* [Table of Contents](#Table-Of-Contents)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributing](#Contributing)
+* [License](#License)
+*[Tests](#Tests)
 
 ## Installation
 
-Use the package manager [${data.packageName}](${data.packageLink}) to install foobar.
+Use the package manager [${data.packageName}](${data.packageLink}) to install ${data.packageName}.
 
 \`\`\`bash
-pip install foobar
+npm install
 \`\`\`
 
 ## Usage
 
-\`\`\`python
-import foobar
+\`\`\`${data.packageName}
+import ${data.packageName}
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+${data.usage}
+
 \`\`\`
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+${data.contribution}
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)`
+[${data.licenseName}](${data.licenseURL})
+
+## Tests
+${data.test}
+
+## Questions
+${data.questions}`
 
         fs.writeFile(filename, readMeTemplate, function (err) {
             if (err) {
