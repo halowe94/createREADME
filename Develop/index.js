@@ -51,8 +51,8 @@ const questions = [
     },
     {
         type: "input",
-        name: "questions",
-        message: "What questions would you like to include?"
+        name: "username",
+        message: "What is your github username?"
     }
 
 ];
@@ -81,7 +81,7 @@ ${data.description}
 * [Usage](#Usage)
 * [Contributing](#Contributing)
 * [License](#License)
-*[Tests](#Tests)
+* [Tests](#Tests)
 
 ## Installation
 
@@ -110,7 +110,9 @@ ${data.contribution}
 ${data.test}
 
 ## Questions
-${data.questions}`
+
+For more info, click here:
+https://github.com/${data.username}`
 
         fs.writeFile(filename, readMeTemplate, function (err) {
             if (err) {
