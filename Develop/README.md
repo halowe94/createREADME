@@ -1,9 +1,9 @@
 
-# project
+# ReadMe in Node.js
 
 ## Description
 
-This project is used to take over the owrld
+A command line application that accepts user input to generate a profession Readme.
 
 # Table of Contents
 * [Description](#Description)
@@ -12,11 +12,11 @@ This project is used to take over the owrld
 * [Usage](#Usage)
 * [Contributing](#Contributing)
 * [License](#License)
-*[Tests](#Tests)
+* [Tests](#Tests)
 
 ## Installation
 
-Use the package manager [inquirer](inquirer.com) to install inquirer.
+Use the package manager [inquirer](https://www.npmjs.com/package/inquirer) to install inquirer.
 
 ```bash
 npm install
@@ -27,18 +27,20 @@ npm install
 ```inquirer
 import inquirer
 
-Usse carafully
+```inquirer
 
 ```
 
 ## Contributing
-Pull requests are welcome, but request before you make changes
+pull requests are welcome, but requests are a necessity before you make changes.
 
 ## License
-[MIT](mit.com)
+[MIT](https://opensource.org/licenses/MIT)
 
 ## Tests
-No current tests avaliable
+No tests availale
 
 ## Questions
-Is the application thorough enough to utilize daily?
+
+For more info, click here:
+https://github.com/halowe94
